@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planejamento LinkedIn — Cesar Oliveira · UpToBrain</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --petrol:#152A3D; --green:#2FAE60; --green-dk:#1E7A45; --orange:#F5941E; --orange-dk:#C97613;
+  --bg:#F3F5F3; --panel:#FFFFFF; --ink:#152A3D; --ink-soft:rgba(21,42,61,.62);
+  --gray:#5B6B7A; --red:#B94A3D;
+}
+body{font-family:'Inter',sans-serif;background:#E5E9E5;color:var(--ink);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;font-weight:400}
+.page{width:100%;max-width:1000px;margin:0 auto;background:var(--bg);box-shadow:0 4px 48px rgba(21,42,61,.16)}
+
+/* CAPA */
+.cover{background:var(--petrol);padding:80px 72px 64px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  border-radius:50%;border:1px solid rgba(47,174,96,.16)}
+.cover::after{content:'';position:absolute;right:20px;bottom:-140px;width:280px;height:280px;
+  border-radius:50%;border:1px solid rgba(245,148,30,.14)}
+.cv-logo{font-family:'Poppins',sans-serif;font-size:12px;font-weight:800;letter-spacing:5px;color:var(--green)}
+.cv-logo span{color:var(--orange)}
+.cv-rule{width:56px;height:3px;background:linear-gradient(to right,var(--green),var(--orange));margin:14px 0 52px}
+.cv-eyebrow{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--orange);margin-bottom:18px}
+.cover h1{font-family:'Poppins',sans-serif;font-size:44px;font-weight:700;color:#fff;
+  line-height:1.16;margin-bottom:14px}
+.cover h1 em{font-style:normal;color:var(--green)}
+.cv-sub{font-family:'Inter',sans-serif;font-weight:300;font-size:18px;color:rgba(255,255,255,.62);margin-bottom:44px}
+.cv-line{height:1px;background:rgba(255,255,255,.16);margin-bottom:28px}
+.cv-tags{display:flex;gap:10px;flex-wrap:wrap}
+.cv-tag{font-family:'Poppins',sans-serif;font-size:9px;font-weight:600;letter-spacing:1.5px;
+  color:var(--green);border:1px solid rgba(47,174,96,.4);padding:7px 14px;border-radius:20px}
+.cv-meta{margin-top:40px;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.3px;line-height:2}
+.cv-meta b{color:var(--orange);font-weight:600}
+
+/* SEÇÕES */
+.sec{padding:56px 72px;border-bottom:1px solid rgba(21,42,61,.1)}
+.sec:last-of-type{border-bottom:none}
+.sec-head{margin-bottom:30px}
+.sec-num{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;color:var(--orange)}
+.sec-title{font-family:'Poppins',sans-serif;font-size:27px;font-weight:700;color:var(--petrol);
+  margin-top:8px;line-height:1.25}
+.sec-title em{font-style:normal;color:var(--green-dk)}
+.sec-rule{width:100%;height:2px;background:linear-gradient(to right,var(--green),var(--orange),transparent);
+  opacity:.55;margin-top:16px}
+.sec-lead{font-size:14px;line-height:1.85;color:var(--ink);margin-top:20px;max-width:780px}
+h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;color:var(--petrol);
+  margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(21,42,61,.14)}
+p{font-size:13.5px;line-height:1.85;margin-bottom:12px}
+strong{font-weight:600;color:var(--petrol)}
+em.q{font-style:italic;color:var(--green-dk)}
+ul{margin:10px 0 14px 20px}li{font-size:13.5px;line-height:1.8;margin-bottom:7px}
+
+/* TABELAS */
+.tw{overflow-x:auto;margin:16px 0 22px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff}
+th{background:var(--petrol);color:#fff;font-family:'Poppins',sans-serif;font-size:9px;
+  font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:11px 13px;text-align:left}
+td{padding:11px 13px;border-bottom:1px solid rgba(21,42,61,.1);vertical-align:top;line-height:1.6}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:rgba(47,174,96,.045)}
+td.kw{font-family:'Poppins',sans-serif;font-weight:700;color:var(--green-dk);letter-spacing:.8px;white-space:nowrap}
+
+/* CAIXAS */
+.box{background:#fff;border-left:4px solid var(--green);padding:20px 24px;margin:18px 0;
+  box-shadow:0 2px 14px rgba(21,42,61,.06)}
+.box.alerta{border-left-color:var(--red);background:#FBF1EF}
+.box.laranja{border-left-color:var(--orange);background:#FDF5EA}
+.box.dark{background:var(--petrol);border-left-color:var(--green)}
+.box.dark p,.box.dark li{color:rgba(255,255,255,.82)}
+.box.dark strong{color:var(--green)}
+.box-lbl{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;
+  color:var(--green-dk);margin-bottom:8px;text-transform:uppercase}
+.box.alerta .box-lbl{color:var(--red)}
+.box.laranja .box-lbl{color:var(--orange-dk)}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+
+.quote{font-family:'Poppins',sans-serif;font-size:17px;font-weight:500;font-style:italic;color:var(--petrol);
+  line-height:1.5;padding:20px 0 20px 24px;border-left:3px solid var(--orange);margin:20px 0}
+.quote span{color:var(--orange-dk);font-style:normal;font-size:12px;font-family:'Inter',sans-serif;
+  display:block;margin-top:10px}
+
+/* GRID DE STATUS DO CLIENTE */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.card{background:#fff;padding:18px 20px;border-top:3px solid var(--green);
+  box-shadow:0 2px 14px rgba(21,42,61,.06)}
+.card.laranja{border-top-color:var(--orange)}
+.card.gray{border-top-color:var(--gray)}
+.card-lbl{font-family:'Poppins',sans-serif;font-size:9px;letter-spacing:1.5px;color:var(--green-dk);margin-bottom:6px;text-transform:uppercase}
+.card.laranja .card-lbl{color:var(--orange-dk)}.card.gray .card-lbl{color:var(--gray)}
+.card-t{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:var(--petrol);margin-bottom:6px}
+.card p{font-size:12.5px;line-height:1.7;margin-bottom:0}
+
+/* CHECKLIST */
+.chk{background:#fff;padding:0;margin:16px 0;box-shadow:0 2px 14px rgba(21,42,61,.06);border-radius:6px;overflow:hidden}
+.chk-i{display:flex;gap:14px;padding:14px 22px;border-bottom:1px solid rgba(21,42,61,.08);align-items:flex-start}
+.chk-i:last-child{border-bottom:none}
+.chk-n{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--green);
+  background:rgba(47,174,96,.12);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-c{flex:1}
+.chk-c .t{font-size:13.5px;color:var(--petrol);font-weight:500;line-height:1.5}
+.chk-c .d{font-size:11.5px;color:rgba(21,42,61,.6);margin-top:4px;line-height:1.65}
+.chk-w{font-family:'Poppins',sans-serif;font-size:8.5px;letter-spacing:1.2px;color:var(--orange-dk);
+  padding-top:5px;white-space:nowrap;font-weight:700}
+
+/* IDEIAS */
+.idea-mod{background:#fff;margin-bottom:12px;box-shadow:0 2px 14px rgba(21,42,61,.06);border-radius:6px;overflow:hidden}
+.idea-mod-h{background:var(--petrol);padding:10px 20px;display:flex;justify-content:space-between;align-items:center}
+.idea-mod-t{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:#fff}
+.idea-mod-kw{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--green);
+  background:rgba(47,174,96,.18);padding:4px 10px;border-radius:10px}
+.idea-i{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:11px 20px;border-bottom:1px solid rgba(21,42,61,.07)}
+.idea-i:last-child{border-bottom:none}
+.idea-n{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--orange-dk)}
+.idea-t{font-size:12.5px;line-height:1.6;color:var(--ink)}
+.idea-p{font-family:'Poppins',sans-serif;font-size:8.5px;letter-spacing:1px;color:var(--gray);text-transform:uppercase;margin-left:6px}
+
+/* POSTS PRONTOS */
+.pp{background:#fff;margin-bottom:24px;box-shadow:0 2px 18px rgba(21,42,61,.09);border-radius:6px;overflow:hidden}
+.pp-h{background:var(--petrol);padding:16px 24px}
+.pp-h .l{font-family:'Poppins',sans-serif;font-size:9px;letter-spacing:2.5px;color:var(--green);margin-bottom:5px;text-transform:uppercase}
+.pp-h .t{font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;color:#fff}
+.pp-meta{display:flex;gap:8px;padding:11px 24px;background:rgba(47,174,96,.06);flex-wrap:wrap;
+  border-bottom:1px solid rgba(21,42,61,.1)}
+.pp-tag{font-family:'Poppins',sans-serif;font-size:8.5px;letter-spacing:1.2px;color:var(--green-dk);
+  background:#fff;border:1px solid rgba(47,174,96,.35);padding:4px 10px;border-radius:10px;font-weight:600}
+.pp-body{padding:22px 24px;font-size:13.5px;line-height:1.85;white-space:pre-wrap;color:var(--ink)}
+.pp-cri{padding:18px 24px;background:var(--bg);border-top:1px solid rgba(21,42,61,.12)}
+.pp-cri .l{font-family:'Poppins',sans-serif;font-size:9px;letter-spacing:2.5px;color:var(--orange-dk);margin-bottom:10px;text-transform:uppercase}
+.pp-cri p{font-size:12.5px;line-height:1.75}
+.faixa{background:var(--orange);color:#fff;padding:10px 16px;font-size:12.5px;
+  font-weight:600;margin-top:10px;text-align:center;border-radius:20px}
+
+/* FOOTER */
+.foot{background:var(--petrol);padding:44px 72px;text-align:center}
+.foot-sig{font-family:'Poppins',sans-serif;font-size:19px;font-weight:700;color:#fff;margin-bottom:6px}
+.foot-sig span{color:var(--green)}
+.foot-i{font-family:'Poppins',sans-serif;font-size:9px;letter-spacing:3px;color:rgba(245,148,30,.7)}
+.foot-d{font-size:10.5px;color:rgba(255,255,255,.32);margin-top:20px;line-height:1.9}
+
+@media(max-width:1000px){
+  .page{width:100%}.sec,.cover,.foot{padding-left:22px;padding-right:22px}
+  .g2,.g3{grid-template-columns:1fr}.cover h1{font-size:30px}.sec-title{font-size:21px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══════════ CAPA ══════════ -->
+<div class="cover">
+  <div class="cv-logo">UPTO<span>BRAIN</span></div>
+  <div class="cv-rule"></div>
+  <div class="cv-eyebrow">Demanda Infinita® · Planejamento LinkedIn</div>
+  <h1>Trocar achismo<br>por <em>dado</em> na gestão<br>de gente.</h1>
+  <div class="cv-sub">Cesar Oliveira · UpToBrain</div>
+  <div class="cv-line"></div>
+  <div class="cv-tags">
+    <span class="cv-tag">STATUS DO CLIENTE</span>
+    <span class="cv-tag">CHECKLIST DE CRESCIMENTO</span>
+    <span class="cv-tag">24 IDEIAS DE CONTEÚDO</span>
+    <span class="cv-tag">6 POSTS PRONTOS</span>
+  </div>
+  <div class="cv-meta">
+    Comprador: <b>RH · DHO · Diretoria de Gente · CEO sem RH estruturado</b><br>
+    Estilo de conteúdo: <b>dor → funcionalidade</b>, inspirado em Matheus Weigand (Getdemo/Salesbud)<br>
+    Atualizado em 15 de setembro de 2026
+  </div>
+</div>
+
+<!-- ══════════ 01 · CLIENTE ATUAL ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div class="sec-title">A estrutura do cliente<br><em>hoje</em></div>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-lbl">Fase do negócio</div>
+      <div class="card-t">Zero clientes pagos</div>
+      <p>Produto pronto há ~1 mês. Objetivo agora não é vender — é preencher <strong>4 vagas gratuitas</strong> do grupo de validação (implementação em 1 célula, acompanhada por até 6 meses).</p>
+    </div>
+    <div class="card laranja">
+      <div class="card-lbl">O que ele já faz sozinho</div>
+      <div class="card-t">5.500 seguidores, posta todo dia</div>
+      <p>Vídeos pessoais + posts diários por conta própria. O que falta é <strong>estrutura</strong> — eixo de dor, isca e CTA consistentes — não volume.</p>
+    </div>
+  </div>
+
+  <h3>O mecanismo central</h3>
+  <div class="quote">RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.<span>Tese de posicionamento — atravessa todo post</span></div>
+  <p>O ativo mais forte é o <strong>Painel do Comitê</strong>: hoje o comitê de calibração calibra a percepção de quem avalia (afinidade, memória seletiva); o UpToBrain faz o comitê calibrar dado. Confirmado em 3 fontes independentes (institucional, roteiro de vídeo e a fala do próprio Cesar) — é o mecanismo que Sólides e Qulture.Rocks não descrevem do mesmo jeito.</p>
+
+  <h3>As 2 dores mestras e os 6 módulos</h3>
+  <div class="tw"><table>
+    <tr><th>Dor mestra</th><th>Módulo que resolve</th><th>Isca</th></tr>
+    <tr><td rowspan="1"><strong>Turnover</strong> — aparece meses depois da decisão que causou</td><td>Monitoramento, Painel Executivo</td><td class="kw">RASTRO</td></tr>
+    <tr><td><strong>Engajamento</strong> — cai por falta de clareza de carreira</td><td>PDI, Avaliação 360</td><td class="kw">PDI · 360</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>Módulo</th><th>Isca</th></tr>
+    <tr><td>Gestão de Metas/OKR</td><td class="kw">META</td></tr>
+    <tr><td>PDI Estruturado</td><td class="kw">PDI</td></tr>
+    <tr><td>Monitoramento</td><td class="kw">RASTRO</td></tr>
+    <tr><td>Avaliação 360°</td><td class="kw">360</td></tr>
+    <tr><td>Feedback</td><td class="kw">FEEDBACK</td></tr>
+    <tr><td><strong>Painel do Comitê</strong> (mecanismo mais forte)</td><td class="kw">COMITE</td></tr>
+  </table></div>
+
+  <div class="box alerta">
+    <div class="box-lbl">Regra de prova — sem exceção</div>
+    <p>Zero cliente pago existe. As estatísticas do site institucional (95%/39%) não têm case documentado — nunca usar. Nenhum post pode prometer resultado numérico.</p>
+  </div>
+
+  <div class="box laranja">
+    <div class="box-lbl">Cuidado de comunicação</div>
+    <p>Meritocracia é tema sensível: o líder que decide por afinidade perde poder quando o dado aparece. Nunca soar como ameaça — sempre liderar com o benefício pro líder (turnover/engajamento do time dele).</p>
+  </div>
+</div>
+
+<!-- ══════════ 02 · CHECKLIST DE CRESCIMENTO ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div class="sec-title">Checklist — o que o<br><em>Cesar</em> precisa fazer</div>
+    <div class="sec-rule"></div>
+    <p class="sec-lead">Ações pessoais dele no LinkedIn, além de publicar os posts estruturados. Sem isso, o melhor conteúdo do mundo não vira candidatura pro grupo de validação.</p>
+  </div>
+
+  <div class="chk">
+    <div class="chk-i"><div class="chk-n">1</div><div class="chk-c"><div class="t">Conferir cargo e setor do perfil</div><div class="d">Tem que estar "Fundador @ UpToBrain" com setor de tecnologia/RH — erro recorrente que já apareceu em outros clientes.</div></div><div class="chk-w">SEMANA 0</div></div>
+    <div class="chk-i"><div class="chk-n">2</div><div class="chk-c"><div class="t">Reescrever a headline com a tese de posicionamento</div><div class="d">"RH não perde talento no dia da demissão..." ou variação curta — não "Fundador de startup de RH".</div></div><div class="chk-w">SEMANA 0</div></div>
+    <div class="chk-i"><div class="chk-n">3</div><div class="chk-c"><div class="t">Coletar o SSI (Social Selling Index) como baseline</div><div class="d">Print da tela do SSI antes de começar — sem baseline não dá pra medir evolução depois.</div></div><div class="chk-w">SEMANA 0</div></div>
+    <div class="chk-i"><div class="chk-n">4</div><div class="chk-c"><div class="t">15-20 convites/dia pra RH/DHO do ICP, sempre com nota</div><div class="d">Rede pessoal já é forte (5.500 seguidores) — manter o ritmo de conexão, sempre qualificando quem entra.</div></div><div class="chk-w">DIÁRIO</div></div>
+    <div class="chk-i"><div class="chk-n">5</div><div class="chk-c"><div class="t">5 comentários por dia em posts de RH/DHO, com opinião real</div><div class="d">Nunca "ótimo post!" — comentário precisa gerar visibilidade de perfil pra quem lê.</div></div><div class="chk-w">DIÁRIO</div></div>
+    <div class="chk-i"><div class="chk-n">6</div><div class="chk-c"><div class="t">Publicar os 3 posts estruturados da semana</div><div class="d">Segunda (meio, isca), Quarta (topo, sem isca), Sexta (fundo, isca ou oferta) — sem furar a proporção.</div></div><div class="chk-w">SEG·QUA·SEX</div></div>
+    <div class="chk-i"><div class="chk-n">7</div><div class="chk-c"><div class="t">Manter os vídeos pessoais — linkando 1x/semana a um módulo específico</div><div class="d">Ele já grava vídeo pessoal diário. Uma vez por semana, amarrar o vídeo a um dos 6 módulos em vez de tema genérico.</div></div><div class="chk-w">SEMANAL</div></div>
+    <div class="chk-i"><div class="chk-n">8</div><div class="chk-c"><div class="t">Responder toda DM/comentário de isca em até 24h</div><div class="d">Quem comenta a palavra-chave é lead quente — resposta lenta esfria a candidatura.</div></div><div class="chk-w">DIÁRIO</div></div>
+    <div class="chk-i"><div class="chk-n">9</div><div class="chk-c"><div class="t">Registrar de onde veio cada candidatura ao grupo de validação</div><div class="d">Post, DM direta ou rede pessoal (Samuel/GC3, Rodrigo, David/Energy Source, Cambuhy) — pra saber o que está puxando peso.</div></div><div class="chk-w">POR LEAD</div></div>
+    <div class="chk-i"><div class="chk-n">10</div><div class="chk-c"><div class="t">Revisão mensal: quantos comentários viraram candidatura</div><div class="d">Se o alcance sobe e a candidatura não vem, o problema é a oferta — não postar mais.</div></div><div class="chk-w">MENSAL</div></div>
+  </div>
+</div>
+
+<!-- ══════════ 03 · 24 IDEIAS ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div class="sec-title">24 ideias de conteúdo</div>
+    <div class="sec-rule"></div>
+    <p class="sec-lead">Organizadas pelas 6 iscas (uma por módulo). Título pronto pra virar post — desenvolvimento completo na skill <strong>cesar-uptobrain-linkedin</strong>.</p>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Gestão de Metas/OKR</span><span class="idea-mod-kw">META</span></div>
+    <div class="idea-i"><span class="idea-n">01</span><span class="idea-t">Você paga bônus por meta batida. Sabe se ela gerou resultado real?<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">02</span><span class="idea-t">Toda meta devia responder uma pergunta: pra quê?<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">03</span><span class="idea-t">PPR sem dado de meta real é aposta, não gestão.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">04</span><span class="idea-t">Quantas metas da sua empresa hoje têm um OKR por trás, e quantas só existem porque sempre existiram?<span class="idea-p">Dor</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">PDI Estruturado</span><span class="idea-mod-kw">PDI</span></div>
+    <div class="idea-i"><span class="idea-n">05</span><span class="idea-t">Se você colocasse líder e liderado em salas separadas, a resposta sobre carreira seria a mesma?<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">06</span><span class="idea-t">PDI baseado em feedback trata o passado. Não pavimenta o próximo nível.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">07</span><span class="idea-t">Os requisitos da próxima posição deviam estar escritos antes da pergunta "o que eu preciso pra crescer?"<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">08</span><span class="idea-t">O papel do padrinho/madrinha: como engajar quem já é sênior a desenvolver quem está subindo.<span class="idea-p">Autoridade</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Monitoramento</span><span class="idea-mod-kw">RASTRO</span></div>
+    <div class="idea-i"><span class="idea-n">09</span><span class="idea-t">O PDI foi feito em janeiro. Alguém olhou de novo antes da avaliação de dezembro?<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">10</span><span class="idea-t">O que não se acompanha mensalmente não virou hábito. Virou intenção.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">11</span><span class="idea-t">Uma tela só com o status de todos os PDIs do seu time — não 15 planilhas separadas.<span class="idea-p">Dor→Funcionalidade</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Avaliação 360°</span><span class="idea-mod-kw">360</span></div>
+    <div class="idea-i"><span class="idea-n">12</span><span class="idea-t">Você ainda roda Avaliação 360 em Google Forms? Sabe comparar evolução ano a ano num clique?<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">13</span><span class="idea-t">Avaliação 360 sem segmentação mistura opinião que não devia estar no mesmo peso.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">14</span><span class="idea-t">O histórico de uma Avaliação 360 vale mais que a nota de uma edição só.<span class="idea-p">Quebra de Crença</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Feedback</span><span class="idea-mod-kw">FEEDBACK</span></div>
+    <div class="idea-i"><span class="idea-n">15</span><span class="idea-t">Você deu o feedback. Sabe se a pessoa aceitou, ou só ouviu educadamente?<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">16</span><span class="idea-t">Feedback sem metodologia vira desabafo. SBI vira plano.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">17</span><span class="idea-t">Se o feedback não é reconhecido, ele não é efetivo — é pró-forma.<span class="idea-p">Quebra de Crença</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Painel do Comitê — mecanismo mais forte</span><span class="idea-mod-kw">COMITE</span></div>
+    <div class="idea-i"><span class="idea-n">18</span><span class="idea-t">Diga adeus às intermináveis horas de preparação de material pra reunião de avaliação de desempenho.<span class="idea-p">Dor→Funcionalidade</span></span></div>
+    <div class="idea-i"><span class="idea-n">19</span><span class="idea-t">O comitê de calibração hoje calibra a percepção de quem avalia. Devia calibrar o dado.<span class="idea-p">Quebra de Crença</span></span></div>
+    <div class="idea-i"><span class="idea-n">20</span><span class="idea-t">"Eu sei que você gosta da Maria, mas a performance dela é 60% e a do colega que você não gosta é 98%."<span class="idea-p">Dor — cuidado, ver Seção 01</span></span></div>
+    <div class="idea-i"><span class="idea-n">21</span><span class="idea-t">Quantas horas o seu RH gasta hoje relembrando fatos em vez de decidindo com dados?<span class="idea-p">Dor</span></span></div>
+  </div>
+
+  <div class="idea-mod"><div class="idea-mod-h"><span class="idea-mod-t">Autoridade / Bastidor</span><span class="idea-mod-kw">—</span></div>
+    <div class="idea-i"><span class="idea-n">22</span><span class="idea-t">Passei 20 anos liderando e sendo liderado. Nunca fui do RH.<span class="idea-p">Autoridade</span></span></div>
+    <div class="idea-i"><span class="idea-n">23</span><span class="idea-t">Antes de existir um botão, existiu uma regra de negócio escrita por mim.<span class="idea-p">Bastidor</span></span></div>
+    <div class="idea-i"><span class="idea-n">24</span><span class="idea-t">Fiz gestão de time com planilha, por anos, antes de virar produto.<span class="idea-p">Bastidor</span></span></div>
+  </div>
+</div>
+
+<!-- ══════════ 04 · 6 POSTS PRONTOS ══════════ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div class="sec-title">6 posts prontos<br><em>— um por módulo</em></div>
+    <div class="sec-rule"></div>
+    <p class="sec-lead">Copy completa, no estilo dor→funcionalidade do Matheus Weigand (Getdemo/Salesbud): cena real, o que a tela resolve, sem estatística inventada. Pronto pra copiar e colar. O CTA de comentário vai no criativo, nunca na copy.</p>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 1 · Painel do Comitê</div><div class="t">A reunião sem PowerPoint</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: COMITE</span><span class="pp-tag">FUNDO</span></div>
+    <div class="pp-body">Toda reunião de avaliação de desempenho começa do mesmo jeito.
+
+Alguém abre um PowerPoint em branco.
+Passa a semana tentando lembrar o que aquela pessoa fez de bom e de ruim nos últimos 12 meses.
+
+Se gosta dela, lembra mais do bom.
+Se não gosta tanto, lembra mais do ruim.
+
+No fim, quem decide não é o trabalho da pessoa. É a memória de quem avalia.
+
+No Painel do Comitê do UpToBrain:
+→ Toda meta, todo feedback, toda Avaliação 360 e todo PDI do ano chegam prontos, na mesma tela
+→ Ninguém monta slide na véspera
+→ O comitê discute número, não quem lembra de quem
+
+Libero o material sobre isso de graça 👇
+
+O DADO NÃO TEM AFINIDADE.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Foto real de pessoa numa sala de reunião, overlay petróleo. Frase em destaque: "A reunião sem PowerPoint". CTA só aqui, nunca na copy:</p><div class="faixa">Comente COMITE e eu te explico como funciona.</div></div>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 2 · PDI Estruturado</div><div class="t">O teste das salas separadas</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: PDI</span><span class="pp-tag">MEIO</span></div>
+    <div class="pp-body">Se você colocasse o líder numa sala e o liderado em outra, e perguntasse pra cada um qual é o plano de carreira dessa pessoa — a resposta seria a mesma?
+
+Na maioria das empresas, não seria.
+
+O líder acha que já conversou sobre isso.
+O liderado não lembra de ter ouvido nada concreto.
+O PDI existe no papel. Não existe na cabeça de quem devia estar seguindo ele.
+
+No módulo de PDI do UpToBrain:
+→ Cada posição tem seus requisitos escritos — padrão e técnico — antes da pessoa perguntar "o que eu preciso pra crescer?"
+→ O plano de carreira mostra o caminho, não só o cargo atual
+→ Um padrinho ou madrinha acompanha — não é só um formulário preenchido uma vez por ano
+
+Libero o checklist que separa PDI de verdade de lista de boas intenções 👇
+
+NINGUÉM SEGUE UM PLANO QUE NÃO LEMBRA DE TER VISTO.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Duas colunas simples: "O líder diz" / "O liderado ouviu" — direto no criativo, sem foto. CTA só aqui:</p><div class="faixa">Comente PDI e eu te explico como funciona.</div></div>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 3 · Avaliação 360°</div><div class="t">Adeus Google Forms</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: 360</span><span class="pp-tag">MEIO</span></div>
+    <div class="pp-body">Sua Avaliação 360 ainda é um Google Forms e uma planilha de Excel por trás?
+
+Cada ciclo, alguém monta o formulário do zero.
+Baixa as respostas. Cola numa planilha.
+Tenta separar na mão o que veio de líder, de par, de liderado.
+
+No fim, ninguém lembra como estava a nota da pessoa dois ciclos atrás.
+
+No módulo de Avaliação 360 do UpToBrain:
+→ Cria uma pesquisa nova em minutos, não numa tarde inteira
+→ Segmenta automaticamente por líder, liderado e pares
+→ Guarda o histórico — dá pra comparar evolução ano a ano num clique
+
+Libero o material sobre o que uma 360 automatizada mostra que planilha nenhuma mostra 👇
+
+HISTÓRICO NÃO SE RECONSTRÓI NA MÃO.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Print estilizado (não screenshot real) de um gráfico de evolução ano a ano — linha simples subindo. CTA só aqui:</p><div class="faixa">Comente 360 e eu te explico como funciona.</div></div>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 4 · Feedback</div><div class="t">O feedback que ninguém confirmou</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: FEEDBACK</span><span class="pp-tag">MEIO</span></div>
+    <div class="pp-body">Você deu o feedback. Mas sabe se a pessoa aceitou — ou só ouviu educadamente e seguiu do mesmo jeito?
+
+A maioria das empresas mede se o feedback foi dado.
+Quase nenhuma mede se ele foi recebido.
+
+E um feedback que não foi aceito não muda comportamento nenhum. Só vira registro de que a conversa aconteceu.
+
+No módulo de Feedback do UpToBrain:
+→ Segue a metodologia SBI — situação, comportamento, impacto — pra não virar desabafo
+→ A pessoa confirma, de forma anônima, se reconheceu aquele feedback ou não
+→ Isso vira indicador pro RH: quais líderes dão feedback que o time realmente aceita
+
+Libero o material sobre a metodologia SBI e como medir se o feedback virou comportamento 👇
+
+FEEDBACK QUE NINGUÉM CONFIRMA NÃO É FEEDBACK. É PRÓ-FORMA.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Balão de mensagem estilizado com a sigla S·B·I explicada em 3 linhas curtas. CTA só aqui:</p><div class="faixa">Comente FEEDBACK e eu te explico como funciona.</div></div>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 5 · Gestão de Metas/OKR</div><div class="t">Bônus sem resultado</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: META</span><span class="pp-tag">MEIO</span></div>
+    <div class="pp-body">Você paga bônus por meta batida. Sabe se ela gerou resultado real pra empresa, ou só existia no papel?
+
+Fim de ano, todo mundo bateu meta. Todo mundo recebeu.
+Só que ninguém checou se aquela meta estava ligada a um resultado que realmente importava.
+
+A meta virou ritual. Não virou medida.
+
+No módulo de Gestão de Metas do UpToBrain:
+→ Toda meta é atrelada a um OKR — dá pra medir se ela realmente move o que importa
+→ Workflow de aprovação, sem e-mail perdido e sem planilha paralela
+→ Histórico fica registrado — alimenta a próxima avaliação de desempenho
+
+Libero as 5 perguntas que mostram se sua meta está ligada a um OKR, ou só existe no papel 👇
+
+META SEM RESULTADO NÃO É META. É DESPESA COM NOME BONITO.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Tabela simples de duas colunas: "Meta batida" / "Resultado que importava" — mostrando o descompasso. CTA só aqui:</p><div class="faixa">Comente META e eu te explico como funciona.</div></div>
+  </div>
+
+  <div class="pp">
+    <div class="pp-h"><div class="l">Post 6 · Monitoramento</div><div class="t">O PDI esquecido em janeiro</div></div>
+    <div class="pp-meta"><span class="pp-tag">DOR→FUNCIONALIDADE</span><span class="pp-tag">ISCA: RASTRO</span><span class="pp-tag">MEIO</span></div>
+    <div class="pp-body">O PDI foi feito em janeiro. Alguém abriu de novo antes da avaliação de dezembro?
+
+O plano de desenvolvimento é feito com entusiasmo no início do ano.
+E esquecido na primeira semana corrida.
+
+Ninguém tem má intenção. Só não existe rotina de olhar de novo — e o que não se acompanha não vira hábito. Vira intenção.
+
+No módulo de Monitoramento do UpToBrain:
+→ Uma tela só mostra o status de todos os PDIs do seu time — não 15 conversas espalhadas
+→ Acompanhamento mensal, por pilar de oportunidade (idioma, técnico, comportamental)
+→ Cada gestor vê só os seus, sem depender de planilha compartilhada
+
+Libero o material sobre como monitorar o plano de desenvolvimento do time inteiro numa tela só 👇
+
+O QUE NÃO SE ACOMPANHA MENSALMENTE NÃO VIROU HÁBITO. VIROU INTENÇÃO.
+
+RH não perde talento no dia da demissão. Perde meses antes, numa decisão tomada sem dado.
+
+Dá pra ver essa tela funcionando antes de decidir qualquer coisa.</div>
+    <div class="pp-cri"><div class="l">Briefing do criativo</div><p>Calendário estilizado com um "X" em janeiro e um ponto de interrogação em dezembro. CTA só aqui:</p><div class="faixa">Comente RASTRO e eu te explico como funciona.</div></div>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="foot">
+  <div class="foot-sig">Demanda <span>Infinita®</span></div>
+  <div class="foot-i">PLANEJAMENTO LINKEDIN · CESAR OLIVEIRA · UPTOBRAIN</div>
+  <div class="foot-d">Construído a partir da call de onboarding de 2026-09-12, do material institucional real e dos 4 criativos de ads já existentes.<br>Skills operacionais completas em <code>cesar-uptobrain-linkedin.md</code>, <code>-design.md</code>, <code>-pesquisa-atualidade.md</code> e <code>-ideias-lead-magnet.md</code>.</div>
+</div>
+
+</div>
+</body>
+</html>
